@@ -10,9 +10,8 @@ class BusinessesController < ApplicationController
   end
 
   def search
-    @businesses = Business.all
     if params[:query].present?
-    @businesss = Business.search(params[:query], where: {business_id: params[:business][:id]})
+    @businesses = Business.search(params[:query], where: {business_id: params[:business][:id]})
     else
     @businesses = Business.all
     end
@@ -23,18 +22,18 @@ class BusinessesController < ApplicationController
   end
 
   def create
-    @business = Business.create(business_params)
-    if @business.save!
-      redirect_to business_path(@business)
+    @business = Business.new(business_params)
+    if @business.save
+      redirect_to businesses_path
     else
-      render 'new'
+      redirect_to businesses_path
     end
   end
 
   private
 
   def business_params
-    params.require(:business).permit(:name, :address,:style, :website, :phone_number)
+    params.require(:business).permit(:name, :address,:style, :website, :phone_number,photos: [])
   end
 
 end

@@ -2,7 +2,12 @@
   <h1><%= @business.name %></h1>
 </div>
   <div class="row">
-
+      <% if @business.photos.nil? %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "https://res.cloudinary.com/drllepyzu/image/upload/v1614315723/qu1ny7iv2ggv23phcshb8mrb9mac.jpg", height: 300, width: 400, crop: :fill %>')">
+      <% else %>
+          <img class="d-block w-100"  src= "<%= cl_image_path @business.photos[0].key, crop: :fill %>", height: "300", width:"550">
+<br>
+      <% end %>
 <br>
 
 <div class="col-md-6 offset-md-3 mt-5" style="margin:0 auto">
