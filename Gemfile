@@ -33,6 +33,7 @@ gem 'devise'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
+
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -63,3 +64,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'searchkick', '~> 4.0'
 
 gem 'cloudinary', '~> 1.16.0'
+gem 'geocoder'

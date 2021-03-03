@@ -3,6 +3,13 @@ class BusinessesController < ApplicationController
 
   def index
     @businesses = Business.all
+
+     @markers = @businesses.geocoded.map do |business|
+        {
+          lat: business.latitude,
+          lng: business.longitude
+        }
+      end
   end
 
   def show

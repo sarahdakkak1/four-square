@@ -12,5 +12,8 @@ class Business < ApplicationRecord
       return 0 unless reviews.count.positive?
       reviews.average(:score).round(2).to_f
   end
+
   searchkick
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
