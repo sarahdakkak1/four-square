@@ -1,0 +1,30 @@
+<div class="container">
+  <h1><%= @business.name %></h1>
+</div>
+  <div class="row">
+
+<br>
+
+<div class="col-md-6 offset-md-3 mt-5" style="margin:0 auto">
+  <div class="card-header">
+    <strong><%= @business.name %></strong>
+</div>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item" id="name"><strong>Address:  </strong><%= @business.address %>
+          <li class="list-group-item"><strong>Style:  </strong> <%= @business.style %></li>
+          <div class="col-md-6 offset-md-3 mt-5" style="margin:0 auto">
+             <div class="card-header">
+                   <h3><%# link_to "Leave a review", business_reviews(@business) %></h3>
+             </div>
+                    <% @business.reviews.each do |review| %>
+                         <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Review:  </strong><%= review.content %>
+                                  <strong>Photos:  </strong><%# review.photos[0] %>
+                              </id>
+                            </li>
+                          </ul>
+                    <% end %>
+                      <p><%# link_to "Edit", edit_business_path(@business) %></p>
+                      <p><%# link_to "Delete", business_path(@business), method: :delete %></p>
+</div>
+</div>

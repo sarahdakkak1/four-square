@@ -1,0 +1,9 @@
+<%= simple_form_for(@business) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :style %>
+  <div class="mt-3">
+  <%= f.submit class: 'btn btn-primary' %>
+  <%= link_to 'Cancel', businesses_path, class: 'btn btn-danger ml-2' %>
+  </div>
+<% end %>

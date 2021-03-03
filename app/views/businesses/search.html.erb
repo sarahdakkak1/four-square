@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Results</h1>
+  <br>
+<%= form_tag search_path, method: :get do %>
+  <%= hidden_field :business, value: @business %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Search your businesses"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary"%>
+<% end %>
+
+ <div class ="container">
+      <% @businesses.each do |business| %>
+          <div class="card-white">
+            <div class="business-card-item">
+              <p><b>business: </b><%= business.name %></p>
+            </div>
+            <div class="business-card-item">
+              <p><b>Address: </b><%= business.address %></p>
+            </div>
+            <div class="business-card-item">
+              <p><b>Type: </b><%= business.type %></p>
+            </div>
+           <!--  <div class="card-category"
+      style="background-image: url('<%# cl_image_path business.photos[0].key, height: 200, width: 300, crop: :fill %>')">        </td>
+            <br> -->
+           <% end %>

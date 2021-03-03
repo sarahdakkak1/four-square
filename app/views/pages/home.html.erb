@@ -1,2 +1,55 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://imagevars.gulfnews.com/2019/11/13/Beautiful-Dubai-Restaurants_16e6425452f_original-ratio.jpg);">
+  <div class="container">
+    <div class="container">
+      <div class="hero-header_nav inline">
+        <ul>
+    <!--         <li><a class="header-nav_link my-2" href="">
+                Write a review
+            </a></li> -->
+   <!--          <li><a class="header-nav_link" href="">
+                Events
+            </a></li> -->
+<!--             <li><a class="header-nav_link" href="">
+                Talk
+            </a></li> -->
+                  <ul>
+              </div>
+                  </div>
+                        <h1>Discover <strong>amazing</strong> places <strong>around you</strong>!</h1>
+                            <p>SHOP | RESTAURANT | COFFEE</p>
+                          <div class="form-group row">
+                        <div class="col-sm-10">
+                      </div>
+                  </div>
+
+
+                  <div class="container">
+                    <%= form_tag search_path, method: :get do %>
+                      <%= hidden_field :business, value: @business %>
+                      <%= text_field_tag :query,
+                        params[:query],
+                        class: "form-control",
+                        placeholder: "Search your shops"
+                      %>
+                      <%= submit_tag "Search", class: "btn btn-primary"%>
+                    <% end %>
+                  </div>
+
+                    <div class="container">
+                      <%= link_to "All shops", businesses_path, class:"btn btn-primary" %>
+                    </div>
+
+<br>
+<br>
+<br>
+<br>
+<!--<h1>Page#index</h1>
+#<h1 aria-level="1" dir="auto" role="heading" class="css-4rbku5 css-901oao sc-AxmLO ceqIL">
+    Discover<br>cafés to love
+        <br>
+        in
+        <span class="css-901oao css-16my406 sc-fzozJi keDGbH">Montréal
+        </span>
+</h1>
+
+<h3 aria-level="3 dir="auto" role="heading">Coffe shops in Montreal ready for take-out</h3>-->
