@@ -1,6 +1,10 @@
-.navbar-lewagon {
+.navbar{
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: $white;
+}
+
+.navbar navbar-expand-lg navbar-light bg-light  {
+  background-color: black;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,9 +16,12 @@
 }
 
 .fas {
-  color: #331a12;
+  color: $yellow;
 }
 
 #navbarTogglerDemo01 {
   width: 40px;
+}
+.fas fa-map-marker-alt {
+  color: $yellow;
 }
