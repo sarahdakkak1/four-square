@@ -4,7 +4,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "https://res.cloudinary.com/drllepyzu/image/upload/v1614834988/mvslimwave_jdod2l.jpg" %>
+    <%= image_tag "https://res.cloudinary.com/drllepyzu/image/upload/v1614837111/MVSLIM_z384ma.png" %>
     <% end %>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
@@ -28,17 +28,19 @@
           <%= submit_tag "Search", class: "btn btn-outline-success"%>
         <% end %>
             </div>
-     <% if user_signed_in? %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+             <% if user_signed_in? %>
+              <li class="nav-item">
+
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                  </li>
+                </li>
+              <% else %>
+                <li class="nav-item">
+                  <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+                </li>
+              <% end %>
           </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-  </div>
-</nav>
+        </nav>
 
 
 
