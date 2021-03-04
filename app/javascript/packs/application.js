@@ -27,9 +27,11 @@ import "bootstrap";
 
 import { initMapbox } from '../plugins/init_mapbox';
 
+import {  previewImageOnFileSelect } from '../plugins/photo_preview';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  previewImageOnFileSelect();
 });
 
 // Internal imports, e.g:

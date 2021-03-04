@@ -1,10 +1,15 @@
+<div class="container">
+  <h1> Add a new business</h1>
 <%= simple_form_for(@business) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :style %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }, input_html: { class: 'hidden', id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
+  <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
+
   <div class="mt-3">
   <%= f.submit class: 'btn btn-primary' %>
   <%= link_to 'Cancel', businesses_path, class: 'btn btn-danger ml-2' %>
-  </div>
 <% end %>
+  </div>
+</div>
