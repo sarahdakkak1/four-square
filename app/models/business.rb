@@ -2,6 +2,9 @@ class Business < ApplicationRecord
   has_many :reviews
   has_many_attached :photos
 
+  validates :name, presence: true
+  validates :address, presence: true
+  validates :photo, presence: true
 
   before_create :slugify
   def slugify

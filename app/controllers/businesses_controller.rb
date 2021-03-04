@@ -38,6 +38,14 @@ class BusinessesController < ApplicationController
     end
   end
 
+
+  def destroy
+    @business = Business.find(params[:id])
+    @business.destroy
+    flash[:notice] = 'businesss deleted successfully'
+    redirect_to businesses_path
+  end
+
   private
 
   def business_params
