@@ -1,0 +1,31 @@
+input {
+  border-radius: 32px !important;
+}
+
+.col {
+  flex: 1 1 0% !important;
+  display: -webkit-flex !important;
+}
+
+button {
+  border-radius: 64px !important;
+}
+
+
+
+.hidden {
+  display: none;
+}
+
+.btn-success {
+    background-color: blue;
+}
+
+.btn-success:hover {
+    background-color: blue;
+}
+
+label {
+  color: $brown;
+  font-weight: bold;
+}

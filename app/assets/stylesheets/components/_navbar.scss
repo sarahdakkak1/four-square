@@ -1,6 +1,7 @@
 .navbar{
   justify-content: space-between;
   background-color: $white;
+  height: 60px;
 }
 
 .navbar navbar-expand-lg navbar-light bg-light  {
@@ -12,7 +13,8 @@
 }
 
 .navbar-brand img {
-  width: 40px;
+  padding-top: 5px;
+  width: 175px;
 }
 
 .fas {
@@ -23,5 +25,48 @@
   width: 40px;
 }
 .fas fa-map-marker-alt {
-  color: $yellow;
+  color: $brown;
+}
+
+span {
+  color: $brown;
+}
+
+a:link {
+  text-decoration: none;
+  padding-right: 30px;
+}
+.hero-header_nav  {
+  display:inline-block;
+  flex-shrink: 3;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
+    min-width: 100%;
+    white-space: nowrap;
+    position: relative;
+    margin-left: 10px;
+    bottom: 200px;
+    float: right;
+    font-size: 0;
+
+  }
+.hero-header_nav .header-nav_link, .hero-header_nav .header-nav_text {
+    display: block;
+    padding: 9px 12px 10px;
+    line-height: 1.28571em;
+    font-weight: 700;
+    background: none;
+    text-decoration: none;
+}
+.header-nav_link {
+    border-radius: 3px;
+}
+.header-nav_link {
+    display: block;
+    padding: 3px 15px;
+    font-size: 13px;
+    line-height: 1.38462em;
+    font-weight: 700;
+    line-height: 21px;
+    font-size: 16px;
 }

@@ -1,43 +1,49 @@
-    <h1>Businesss</h1>
-<div class="title">
+  <div class="index-page">
+  <h1>Business</h1>
+  <div class="title">
     <a href="businesses/new", style="float: right;", class="btn btn-success">Add shops</a></span>
     </div>
-        <% if @businesses.any? %>
-        <% @businesses.each do |business| %>
-          <div class="container">
+ <% if @businesses.any? %>
+         <div class="container">
           <table class="table table-hover">
+        <% @businesses.each do |business| %>
+
                 <thead>
                   <tr>
-                <th>business Name</th>
+                <th>Name</th>
                 <th>Description</th>
-                <th>Reviews</th>
-                 </tr>
+<!--                 <th>Reviews</th>
+ -->                 </tr>
                     </thead>
                           <tbody>
                                 <tr>
                                   <td>
-                                <h4><%= link_to business.name, business_path(business.slug) %></h4>
-                            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path business.photos[0].key, height: 300, width: 400, crop: :fill %>')">
-                                  <td>
-                                    <td>
-                                    <p><%= business.address %></p>
+                                      <h4><%= link_to business.name, business_path(business.slug) %></h4>
+                                        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path business.photos[0].key, height: 300, width: 400, crop: :fill %>')">
+                                          <td>
+                                              <p><%= business.style %></p>
+                                              <p><%= business.address %></p>
+                                            <td>
                                     <%# link_to "Edit #{business.name}", edit_business_path(business), class:"btn btn-default" %>
                                     <%# link_to "Delete #{business.name}", business_path(business), method: :delete, class:"btn btn-default" %>
-                                  </td>
-                                  <td>
+                                            </td>
+                 <!--                  <td>
                                   <%# business.reviews.each do |review| %>
                                     <p><%#review.content %></p>
                                   <%# end %>
                                     <h5>Average rating: <%#star_rating(business.average_rating) %></h5>
                                   <%# link_to "Review #{business.name}", new_business_review_path(business), class:"btn btn-default" %>
-                                  </td>
+                                  </td> -->
                                 </tr>
-                          </tbody>
-                          </table>
                           <% end %>
+
                           <%else %>
                           <h1>No businesses yet</h1>
                     <% end %>
+                                              </tbody>
+
+                                                                        </table>
+
   </div>
   </div>
 </div>
@@ -45,8 +51,11 @@
 <div class="container">
   <div class="col">
 <div id="map"
-     style="width: 100%; height: 600px;"
+     style="width: 50%; height: 600px;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
      </div>
    </div>
+
+
+ </div>

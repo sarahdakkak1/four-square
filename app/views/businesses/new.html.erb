@@ -4,7 +4,7 @@
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :style %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true }, input_html: { class: 'hidden', id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
 
   <div class="mt-3">

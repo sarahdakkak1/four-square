@@ -1,0 +1,47 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.cntraveler.com/photos/5b72f04a3b09af352f4390ab/master/pass/Agrikol_2018_Inte%CC%81rieur.jpg);">
+  <div class="container">
+    <div class="container">
+
+                  <div class="logo">
+                        <% image_tag "https://res.cloudinary.com/drllepyzu/image/upload/v1614837111/MVSLIM_z384ma.png" %>
+                        <h1>Discover <strong>amazing</strong> places <strong>around you</strong>!</h1>
+                            <p>SHOP | RESTAURANT | COFFEE</p>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+
+                  <br>
+
+                  <div class="container">
+                    <h1>New place to visit</h1>
+                      <div class="row">
+                            <div class="col">
+                            <% @businesses.each do |business| %>
+                          <div class="row">
+                            <div class="col">
+                                  <table class="table table-hover">
+                                    <tbody>
+                                      <tr>
+                                        <th><%= link_to business.name, business_path(business.slug) %>
+                                        </th>
+                                      </div>
+
+                                      </tr>
+                                  </tbody>
+                                      <thead>
+                                            <td>
+                                                <div class="card-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path business.photos[0].key, height: 300, width: 400, crop: :fill %>')">
+                                                  </div>
+                                                </div>
+                                                  <td>
+                                              </thead>
+                                                  <% end %>
+                                              </table>
+                                           </div>
+
+
+
+
+
+

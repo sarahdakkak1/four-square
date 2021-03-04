@@ -1,5 +1,9 @@
 class BusinessesController < ApplicationController
-  before_action :authenticate_user!, :except => [:index, :show, :search]
+  before_action :authenticate_user!, :except => [:index, :show, :search, :home]
+
+  def home
+    @businesses = Business.all
+  end
 
   def index
     @businesses = Business.all
@@ -14,6 +18,8 @@ class BusinessesController < ApplicationController
   end
 
   def show
+    @businesses = Business.all
+
     @business = Business.find_by(slug: params[:slug])
   end
 
@@ -31,7 +37,7 @@ class BusinessesController < ApplicationController
 
   def create
     @business = Business.new(business_params)
-    if @business.save
+    if @business.save!
       redirect_to businesses_path
     else
       redirect_to businesses_path

@@ -4,7 +4,7 @@ class Business < ApplicationRecord
 
   validates :name, presence: true
   validates :address, presence: true
-  validates :photo, presence: true
+  # validates :photos, presence: true
 
   before_create :slugify
   def slugify

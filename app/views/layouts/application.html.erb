@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <% unless action_name=='new' %>
+    <% unless action_name=='new' || action_name=='show'  %>
     <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>
