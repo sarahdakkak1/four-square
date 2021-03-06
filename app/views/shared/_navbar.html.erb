@@ -4,7 +4,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "https://res.cloudinary.com/drllepyzu/image/upload/v1614837111/MVSLIM_z384ma.png" %>
+    <%= image_tag "https://res.cloudinary.com/drllepyzu/image/upload/v1614913794/MVSLIM_1_ntm0ty.png" %>
     <% end %>
         <ul class="navbar-nav mr-auto m-2 mt-lg-0">
 <!--       <li class="nav-item active">
@@ -18,8 +18,7 @@
       </li> -->
     </ul>
 
-        <span class="navbar-text"><a class="fas fa-map-marker-alt" href="businesses">
-Montréal     </a>  </span></a>
+
         <div class="form-inline my-2 my-lg-0">
         <%= form_tag search_path, method: :get do %>
           <%= hidden_field :business, value: @business %>
@@ -31,6 +30,8 @@ Montréal     </a>  </span></a>
           <%= submit_tag "Search", class: "d-none"%>
         <% end %>
             </div>
+<!--               <span class="navbar-text"><a class="fas fa-map-marker-alt" href="businesses">
+          Montréal     </a>  </span></a> -->
              <% if user_signed_in? %>
               <li class="nav-item">
 
